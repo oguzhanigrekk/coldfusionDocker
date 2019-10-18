@@ -1,17 +1,3 @@
 FROM eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest
+LABEL Name=coldfusiondocker Version=0.0.1
 
-MAINTAINER Oguzhan Igrek <oguzhanigrek@gmail.com>
-
-LABEL Name=oguzhanigrekcoldfusion Version=0.0.1
-
-RUN apt-get -y update && apt-get install -y git
-
-ENV acceptEULA=YES
-
-ENV password=ColdFusion123
-
-WORKDIR /home/w3/Desktop/ColdfusionDocker
-
-CMD git clone https://github.com/oguzhanigrekk/coldfusionDocker.git
-
-EXPOSE 8500
