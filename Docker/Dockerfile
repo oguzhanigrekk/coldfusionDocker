@@ -6,6 +6,10 @@ LABEL Name=oguzhanigrekcoldfusion Version=0.0.1
 
 RUN apt-get -y update && apt-get install -y git
 
+ENV acceptEULA=YES
+
+ENV password=ColdFusion123
+
 WORKDIR /home/w3/Desktop/ColdfusionDocker
 
 CMD git clone https://github.com/oguzhanigrekk/coldfusionDocker.git
